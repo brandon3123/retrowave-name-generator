@@ -80,7 +80,7 @@ cassette ="      ___________________________________________\n"\
 
 retroWaveAsciiList = [knight, superCar, cassette]
 
-## geenrates
+## generates a RetroWave name
 def generateRetroName():
 
     firstName = fetchPhraseFromList()

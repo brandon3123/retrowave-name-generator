@@ -91,8 +91,6 @@ def generateRetroName():
 
     return firstName + " " + secondName
 
-
-
 def fetchNameFromList():
     return retroWaveNameList[random.randint(0, len(retroWaveNameList) - 1)]
 

@@ -1,7 +1,6 @@
 import random
 
-retroWavePhrases = ["Cassette", "Photon",
-                     "Mega", "Omega", "Shine", "Tape", "Ninja", "Captain", "Force", "Drive", "Synth",
+retroWavePhrases = ["Cassette", "Photon","Mega", "Omega", "Shine", "Tape", "Ninja", "Captain", "Force",
                      "Laser", "Max", "Night", "Cruise", "Star", "Captain", "Cyber", "Droid", "Boom",
                      "Neon", "Grid", "Electro", "Rocket", "Dynamic", "Edge", "Thunder", "Major",
                      "Magnum", "Tech", "Guy", "System", "Burner", "Rouge", "Velvet", "Future", "Nitro",
@@ -9,11 +8,12 @@ retroWavePhrases = ["Cassette", "Photon",
                     "Bishop", "Wave", "Turbo", "Sunset", "Racer", "Killer", "87", "88", "Vice", "Runner",
                     "Arcade", "Player", "Disco", "64", "12", "City", "Midnight", "Horizon", "Beach" 
                      "Blue", "Style", "Viper", "Panther", "Snake", "Razor", "Track", "44", "Finisher",
-                    "Groovy", "Sharp", "Miami", "Fuel", "Cosmic", "Space", "Renegade", "Tune", "Retro", "Throwback",
-                    "Outcast", "Dancer"]
+                    "Groove", "Sharp", "Miami", "Fuel", "Cosmic", "Space", "Renegade", "Tune", "Retro",
+                    "Outcast", "Dancer", "Power", "Metal", "Crank", "56", "Light", "Shine", "Tape",
+                    "Beam", "Blaster", "Drive", "Synth", "Throwback", "Cool", "Major"]
 
-slogans = ["Welcome to the fight", "Brave the front", "The hero we need", "Prepare yourself", "Destiny has found you",
-           "The worlds fate is yours", "Enter at your own risk"]
+slogans = ["Welcome to the fight", "Brave the front", "The hero we need", "Prepare yourself",
+           "Destiny has found you","The worlds fate is yours", "Enter at your own risk"]
 
 logo = "*******************************************************************"\
 "\n** ________     _____             ___       __                    **"\
@@ -78,7 +78,7 @@ cassette ="      ___________________________________________\n"\
 "      !______/_____________________________\______!\n"\
 
 
-retroWaveAsciiList = [knight, superCar, cassette]
+retroWaveAsciiImages = [knight, superCar, cassette]
 
 ## generates a RetroWave name
 def generateRetroName():
@@ -101,7 +101,7 @@ def fetchSloganFromList():
 
 ## Randomly select an ascii art image
 def fetchAsciiArtFromList():
-    return retroWaveAsciiList[random.randint(0, len(retroWaveAsciiList) - 1)]
+    return retroWaveAsciiImages[random.randint(0, len(retroWaveAsciiImages) - 1)]
 
 print(logo + "\n" + "\n")
 

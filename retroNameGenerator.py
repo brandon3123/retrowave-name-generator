@@ -99,7 +99,7 @@ def fetchPhraseFromList():
 
 ## Randomly select a finishing slogan
 def fetchSloganFromList():
-    return slogans[random.randint(1, len(slogans) - 1)]
+    return slogans[random.randint(0, len(slogans) - 1)]
 
 ## Randomly select an ascii art image
 def fetchAsciiArtFromList():

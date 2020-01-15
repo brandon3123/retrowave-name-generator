@@ -27,7 +27,42 @@ logo = "*******************************************************************"\
 
 banner = "************************************************************ " \
 
-# During name generation, I need to make sure that both names arent a number.....look this up at home.
+knight = "                    _.--.    .--._\n"\
+"                  .'  .'      '.  '.\n" \
+"                 ;  .'    /\    '.  ;\n" \
+"                 ;  '._,-/  \-,_.`  ;\n" \
+"                 \  ,`  / /\ \  `,  /\n" \
+"                  \/    \/  \/    \/\n" \
+"                  ,=_    \/\/    _=,\n" \
+"                  |  '_   \/   _'  |\n" \
+"                  |_   ''-..-''   _|\n" \
+"                  | '-.        .-' |\n" \
+"                  |    '\    /'    |\n" \
+"                  |      |  |      |\n" \
+"          ___     |      |  |      |     ___\n" \
+"      _,-',  ',   '_     |  |     _'   ,'  ,'-,_\n" \
+"    _(  \  \   \=-- -.  |  |  .- --= /   /  /  )_\n" \
+" ,   \  \  \   \       -'--'-       /   /  /  /   .\n" \
+"!     \  \  \   \                  /   /  /  /     !\n" \
+":      \  \  \   \                /   /  /  /      TK\n"\
+
+superCar ="                    ___..............._\n"\
+"          __.. ' _'.'''''''''\\'''''''''- .`-._\n"\
+" ______.-'         (_) |      \\           ` \\`-. _\n"\
+"/_       --------------'-------\\---....______\\__`.`  -..___\n"\
+"| T      _.----._           Xxx|x...           |          _.._`--. _\n"\
+"| |    .' ..--.. `.         XXX|XXXXXXXXXxx==  |       .'.---..`.     -._\n"\
+"\_j   /  /  __  \  \        XXX|XXXXXXXXXXX==  |      / /  __  \ \        `-.\n"\
+" _|  |  |  /  \  |  |       XXX|""'            |     / |  /  \  | |          |\n"\
+"|__\_j  |  \__/  |  L__________|_______________|_____j |  \__/  | L__________J\n"\
+"     `'\ \      / ./__________________________________\ \      / /___________\n"\
+"        `.`----'.'   dp                                `.`----'.'\n"\
+"          `'''''                                         `'''''\n"\
+
+
+retroWaveAsciiList = [knight, superCar]
+
+# During name generation, I need to make sure that both names aren't a number.....look this up at home.
 def generateRetroName():
 
     firstName = fetchNameFromList()
@@ -41,19 +76,26 @@ def generateRetroName():
 
 
 def fetchNameFromList():
-    return retroWaveNameList[random.randint(1, len(retroWaveNameList) - 1)]
+    return retroWaveNameList[random.randint(0, len(retroWaveNameList) - 1)]
 
 def fetchSloganFromList():
     return slogans[random.randint(1, len(slogans) - 1)]
 
-print(logo)
+def fetchAsciiArtFromList():
+    return retroWaveAsciiList[random.randint(0, len(retroWaveAsciiList) - 1)]
+
+print(logo + "\n" + "\n")
 userInput = ""
 while userInput != "0":
-    userInput = input("Press enter to generate a RetroWave name or input '0' to terminate program.....")
+    userInput = raw_input("Press 'Enter' to generate a RetroWave name or input '0' to terminate program.....")
     if userInput != "0":
-        print(banner
+        print("\n\n"
+              + banner
+              + "\n\n "
+              + fetchAsciiArtFromList()
               + "\n         "
               + fetchSloganFromList()
               + "....." + generateRetroName() + "!"
               + "            \n"
-              + banner)
+              + banner
+              + "\n\n")

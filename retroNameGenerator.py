@@ -13,8 +13,8 @@ retroWavePhrases = ["Cassette", "Photon","Mega", "Omega", "Shine", "Tape", "Ninj
                     "Beam", "Blaster", "Drive", "Synth", "Throwback", "Cool", "Major"]
 
 slogans = ["Welcome to the fight", "Brave the front", "The hero we need", "Prepare yourself",
-           "Destiny has found you","The worlds fate is yours", "Enter at your own risk", "You've finally arrived"
-           "Are you ready?", "At long last", "Keep your head up", "Give em hell"
+           "Destiny has found you","The worlds fate is yours", "Enter at your own risk", "You've finally arrived",
+           "Are you ready?", "At long last", "Keep your head up", "Give em hell",
            "Pull yourself together", "Don't hold back"]
 
 logo = "*******************************************************************"\
@@ -108,15 +108,36 @@ def fetchAsciiArtFromList():
 print(logo + "\n" + "\n")
 
 userInput = ""
+lastUsedSlogan= ""
+lastUsedImage= ""
 
 while userInput != "0":
     userInput = raw_input("Press 'Enter' to generate a RetroWave name or input '0' to terminate program.....")
     if userInput != "0":
+
+        imageToDisplay = fetchAsciiArtFromList()
+
+        ## Ensure no image used previously can be duplicated.
+        while imageToDisplay == lastUsedImage:
+            imageToDisplay = fetchAsciiArtFromList()
+
+        sloganToDisplay = fetchSloganFromList()
+
+        ## Ensure no slogan used previously can be duplicated.
+        while sloganToDisplay == lastUsedSlogan:
+            sloganToDisplay = fetchSloganFromList()
+
+
         print("\n\n"
               + "\n\n "
-              + fetchAsciiArtFromList()
+              + imageToDisplay
               + "\n         "
-              + fetchSloganFromList()
+              + sloganToDisplay
               + "....." + generateRetroName() + "!"
               + "            \n"
               + "\n\n")
+
+        lastUsedSlogan = sloganToDisplay
+        lastUsedImage = imageToDisplay
+
+print("Program terminated....")

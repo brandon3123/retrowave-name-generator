@@ -1,16 +1,16 @@
 import random
 
-retroWaveNameList = ["Cassette", "Photon",
+retroWavePhrases = ["Cassette", "Photon",
                      "Mega", "Omega", "Shine", "Tape", "Ninja", "Captain", "Force", "Drive", "Synth",
                      "Laser", "Max", "Night", "Cruise", "Star", "Captain", "Cyber", "Droid", "Boom",
                      "Neon", "Grid", "Electro", "Rocket", "Dynamic", "Edge", "Thunder", "Major",
                      "Magnum", "Tech", "Guy", "System", "Burner", "Rouge", "Velvet", "Future", "Nitro",
                      "Matrix", "FM", "AC", "Glove", "Slash", "Energy", "Maverick", "Gun", "Groove",
-                     "Bishop", "Wave", "Turbo", "Sunset", "Racer", "Killer", "87", "88", "Vice", "Runner",
-                     "Arcade", "Player", "Disco", "64", "12", "City", "Midnight", "Horizon", "Beach" 
+                    "Bishop", "Wave", "Turbo", "Sunset", "Racer", "Killer", "87", "88", "Vice", "Runner",
+                    "Arcade", "Player", "Disco", "64", "12", "City", "Midnight", "Horizon", "Beach" 
                      "Blue", "Style", "Viper", "Panther", "Snake", "Razor", "Track", "44", "Finisher",
-                     "Groovy", "Sharp", "Miami", "Fuel", "Cosmic", "Space", "Renegade", "Tune", "Retro", "Throwback",
-                     "Outcast", "Dancer"]
+                    "Groovy", "Sharp", "Miami", "Fuel", "Cosmic", "Space", "Renegade", "Tune", "Retro", "Throwback",
+                    "Outcast", "Dancer"]
 
 slogans = ["Welcome to the fight", "Brave the front", "The hero we need", "Prepare yourself", "Destiny has found you",
            "The worlds fate is yours", "Enter at your own risk"]
@@ -80,28 +80,33 @@ cassette ="      ___________________________________________\n"\
 
 retroWaveAsciiList = [knight, superCar, cassette]
 
-# During name generation, I need to make sure that both names aren't a number.....look this up at home.
+## geenrates
 def generateRetroName():
 
-    firstName = fetchNameFromList()
-    secondName = fetchNameFromList()
+    firstName = fetchPhraseFromList()
+    secondName = fetchPhraseFromList()
 
     while secondName == firstName:
-        secondName = fetchNameFromList()
+        secondName = fetchPhraseFromList()
 
     return firstName + " " + secondName
 
-def fetchNameFromList():
-    return retroWaveNameList[random.randint(0, len(retroWaveNameList) - 1)]
+## Randomly select a retro wave phrase
+def fetchPhraseFromList():
+    return retroWavePhrases[random.randint(0, len(retroWavePhrases) - 1)]
 
+## Randomly select a finishing slogan
 def fetchSloganFromList():
     return slogans[random.randint(1, len(slogans) - 1)]
 
+## Randomly select an ascii art image
 def fetchAsciiArtFromList():
     return retroWaveAsciiList[random.randint(0, len(retroWaveAsciiList) - 1)]
 
 print(logo + "\n" + "\n")
+
 userInput = ""
+
 while userInput != "0":
     userInput = raw_input("Press 'Enter' to generate a RetroWave name or input '0' to terminate program.....")
     if userInput != "0":

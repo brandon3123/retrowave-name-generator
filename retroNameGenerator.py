@@ -13,7 +13,9 @@ retroWavePhrases = ["Cassette", "Photon","Mega", "Omega", "Shine", "Tape", "Ninj
                     "Beam", "Blaster", "Drive", "Synth", "Throwback", "Cool", "Major"]
 
 slogans = ["Welcome to the fight", "Brave the front", "The hero we need", "Prepare yourself",
-           "Destiny has found you","The worlds fate is yours", "Enter at your own risk"]
+           "Destiny has found you","The worlds fate is yours", "Enter at your own risk", "You've finally arrived"
+           "Are you ready?", "At long last", "Keep your head up", "Give em hell"
+           "Pull yourself together", "Don't hold back"]
 
 logo = "*******************************************************************"\
 "\n** ________     _____             ___       __                    **"\

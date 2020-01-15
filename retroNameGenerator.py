@@ -6,9 +6,8 @@ retroWavePhrases = ["Cassette", "Photon", "Mega", "Omega", "Shine", "Tape", "Nin
                     "Magnum", "Tech", "Guy", "System", "Burner", "Rouge", "Velvet", "Future", "Nitro",
                     "Matrix", "FM", "AC", "Glove", "Slash", "Energy", "Maverick", "Gun", "Groove",
                     "Bishop", "Wave", "Turbo", "Sunset", "Racer", "Killer", "87", "88", "Vice", "Runner",
-                    "Arcade", "Player", "Disco", "64", "12", "City", "Midnight", "Horizon", "Beach"
-                                                                                            "Blue", "Style", "Viper",
-                    "Panther", "Snake", "Razor", "Track", "44", "Finisher",
+                    "Arcade", "Player", "Disco", "64", "12", "City", "Midnight", "Horizon", "Beach",
+                    "Blue", "Style", "Viper","Panther", "Snake", "Razor", "Track", "44", "Finisher",
                     "Groove", "Sharp", "Miami", "Fuel", "Cosmic", "Space", "Renegade", "Tune", "Retro",
                     "Outcast", "Dancer", "Power", "Metal", "Crank", "56", "Light", "Shine", "Tape",
                     "Beam", "Blaster", "Drive", "Synth", "Throwback", "Cool", "Major"]

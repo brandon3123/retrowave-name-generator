@@ -80,7 +80,6 @@ cassette = "      ___________________________________________\n" \
 
 retroWaveAsciiImages = [knight, superCar, cassette]
 
-
 ## generates a RetroWave name
 def generateRetroName():
     firstName = fetchPhraseFromList()
@@ -90,7 +89,6 @@ def generateRetroName():
         secondName = fetchPhraseFromList()
 
     return firstName + " " + secondName
-
 
 ## Randomly select a retro wave phrase
 def fetchPhraseFromList():
@@ -105,7 +103,6 @@ def fetchSloganFromList():
 ## Randomly select an ascii art image
 def fetchAsciiArtFromList():
     return retroWaveAsciiImages[random.randint(0, len(retroWaveAsciiImages) - 1)]
-
 
 print(logo + "\n" + "\n")
 

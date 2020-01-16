@@ -129,14 +129,12 @@ while userInput != "0":
         while sloganToDisplay == lastUsedSlogan:
             sloganToDisplay = fetchSloganFromList()
 
-        print("\n\n"
-              + "\n\n "
+        print("\n\n\n\n "
               + imageToDisplay
               + "\n         "
               + sloganToDisplay
               + "....." + generateRetroName() + "!"
-              + "            \n"
-              + "\n\n")
+              + "            \n\n\n")
 
         lastUsedSlogan = sloganToDisplay
         lastUsedImage = imageToDisplay

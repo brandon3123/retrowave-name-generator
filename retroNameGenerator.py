@@ -85,10 +85,13 @@ def generateRetroName():
     firstName = fetchPhraseFromList()
     secondName = fetchPhraseFromList()
 
-    while secondName == firstName:
+    while (secondName == firstName) or (secondName.isdigit() and firstName.isdigit()):
         secondName = fetchPhraseFromList()
 
-    return firstName + " " + secondName
+    if firstName.isdigit():
+        return secondName + " " + firstName
+    else:
+        return firstName + " " + secondName
 
 ## Randomly select a retro wave phrase
 def fetchPhraseFromList():

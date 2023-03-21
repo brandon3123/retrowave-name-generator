@@ -114,7 +114,7 @@ lastUsedSlogan = ""
 lastUsedImage = ""
 
 while userInput != "0":
-    userInput = raw_input("Press 'Enter' to generate a RetroWave name or input '0' to terminate program.....")
+    userInput = input("Press 'Enter' to generate a RetroWave name or input '0' to terminate program.....")
     if userInput != "0":
 
         imageToDisplay = fetchAsciiArtFromList()
